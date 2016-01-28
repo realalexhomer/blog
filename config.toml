@@ -1,0 +1,6 @@
+baseurl = "http://blog.hugoexample.com/"
+languageCode = "en-us"
+title = "I like potatoes"
+canonifyurls = true
+[taxonomies]
+listedPost = "listedPosts"
