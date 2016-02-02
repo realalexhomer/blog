@@ -1,32 +1,15 @@
-    <div class="panel panel-default">
-        <div class="panel-heading" style="padding: 2px 15px;">
-            <h4>Connect. Socialize.</h4>
-        </div>
-        <div class="panel-body">
-                <div class="sup">
-                    {{ printf "%#v" .Site.Taxonomies.listedPosts.all }}
-                </div>
-                <ul>
-                {{ range .Site.Taxonomies.listedPosts.all }}
-                  <li><a href="{{.Page.URL}}">{{.Page.Title}}</a></li>
-                {{ end }}
-                </ul>
-
-
-<!--               {{ range $taxonomyname, $taxonomy := .Site.Taxonomies.postz }}
-                <li><a href="/{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a>
-                  <ul>
-                    {{ range $key, $value := $taxonomy }}
-                    <li> {{ $key }} </li>
-                          <ul>
-                          {{ range $value.Pages }}
-                                hi
-                          {{ end }}
-                          </ul>
-                    {{ end }}
-                  </ul>
-                </li>
-              {{ end }}
-            </ul> -->
-        </div>
+<div class="panel panel-default">
+    <div class="panel-heading" style="padding: 2px 15px;">
+        <h4>Connect. Socialize.</h4>
     </div>
+    <div class="panel-body">
+      <div class="sup">
+          {{ printf "%#v" .Site.Taxonomies.listedPosts.all }}
+      </div>
+      <ul>
+        {{ range .Site.Taxonomies.listedPosts.all }}
+          <li><a href="{{.Page.Permalink}}">{{.Page.Title}}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+</div>
