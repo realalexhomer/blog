@@ -1,14 +1,11 @@
-<div class="panel panel-default">
-    <div class="panel-heading" style="padding: 2px 15px;">
-        <h4>Connect. Socialize.</h4>
+<div class="side-menu">
+    <div class="side-menu-heading">
+        <h4>Side Menu Heading</h4>
     </div>
-    <div class="panel-body">
-      <div class="sup">
-          {{ printf "%#v" .Site.Taxonomies.listedPosts.all }}
-      </div>
-      <ul>
+    <div class="side-menu-body">
+      <ul class="side-menu-post-list">
         {{ range .Site.Taxonomies.listedPosts.all }}
-          <li><a href="{{.Page.Permalink}}">{{.Page.Title}}</a></li>
+          <li class="side-menu-post-list-item"><a class="side-menu-list-link" href="{{.Page.Permalink}}">{{.Page.Title}}</a></li>
         {{ end }}
       </ul>
     </div>
